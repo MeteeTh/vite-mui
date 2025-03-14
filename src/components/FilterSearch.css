@@ -1,0 +1,62 @@
+.filter-search-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.filter-search-item {
+    padding: 15px;
+    width: 200px;
+    max-width: 100%;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #f0f0f0;
+    /* ตั้งค่าสีพื้นหลัง */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    /* เพิ่มการเปลี่ยนแปลงสีพื้นหลังและขนาดเมื่อ hover */
+}
+
+.filter-search-item:hover {
+    background-color: #e0e0e0;
+    /* เปลี่ยนสีพื้นหลังเมื่อ hover */
+    transform: scale(1.05);
+    /* ขยายขนาด item เมื่อ hover */
+    cursor: pointer;
+}
+
+.filter-search-item:active {
+    background-color: #d0d0d0;
+    /* เปลี่ยนสีพื้นหลังเมื่อกด */
+    transform: scale(1);
+    /* ปรับขนาดกลับเมื่อคลิก */
+}
+
+.filter-search-label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    /* เปลี่ยนสีข้อความ */
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.image-item {
+    width: 200px;
+    text-align: center;
+}
+
+.image-item img {
+    width: 100%;
+    border-radius: 8px;
+}

@@ -1,0 +1,157 @@
+/* .app-container {
+    position: relative;
+    min-height: 100vh;
+    background-image: url('./assets/Background.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+} */
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 300px;
+}
+
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-image: url('./assets/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-image {
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    
+}
+
+
+
+.whats {
+    margin: 0;
+}
+
+.new {
+    margin-top: 15px;
+    font-size: 32px;
+}
+
+.whats-new {
+    width: 100%;
+    position: relative;
+    line-height: 100%;
+    color: #000;
+    text-align: left;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.album-container {
+    margin-top: 50px;
+}
+
+.album-uptext {
+    margin: 0;
+}
+
+.album-title {
+    margin-top: 15px;
+    font-size: 32px;
+}
+
+.album-search {
+    width: 100%;
+    position: relative;
+    line-height: 100%;
+    color: #000;
+    text-align: left;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.news-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.news-title {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 26px;
+    margin-top: 20px;
+}
+
+.hover-underline-animation {
+    position: relative;
+    color: darkred;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    justify-content: center;
+}
+
+.hover-underline-animation::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: darkred;
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.hover-underline-animation:hover {
+    color: #b22222;
+}
+
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.sithan-kku-festival-parent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 8px;
+    width: 100%;
+    margin: 20px auto;
+    justify-content: center;
+}
+
+.sithan-kku-festival-parent img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+
+}
+
+.view-more-container {
+    width: 100%;
+    position: relative;
+    font-size: 18px;
+    color: #a73b24;
+    text-align: right;
+    justify-content: right;
+    display: flex;
+    text-decoration: none;
+}
