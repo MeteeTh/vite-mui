@@ -5,15 +5,17 @@ import Content from '../components/Content/Content'
 import BackTop from '../components/back-top/back-top'
 import './MainLayout.css'
 
+
 function MainLayout() {
 
     return (
         <>
-                <Header />
-                <HeroSection />
-                <Content />
-                <BackTop />
-                <Footer />
+            <Header />
+            <HeroSection />
+          
+            <Content />
+            <BackTop />
+            {/* <Footer /> */}
         </>
     )
 }

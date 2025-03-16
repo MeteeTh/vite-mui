@@ -2,7 +2,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 50px 300px;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+}
+
+#content-container {
+   margin: 50px 300px;
 }
 
 .uptext {
