@@ -28,7 +28,7 @@ function Content() {
 
                     {/* ปกอัลบั้ม */}
                     <div className="news-image-cover">
-                        <img src="/public/images/Sithan KKU Festival.png" alt="album-cover" className="news-image" />
+                        <img src="/images/Sithan KKU Festival.png" alt="album-cover" className="news-image" />
                     </div>
 
                     {/* ชื่ออัลบั้ม */}
