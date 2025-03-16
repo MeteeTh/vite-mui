@@ -13,7 +13,7 @@ const images = [
 ];
 
 const Browse = () => {
-    const [filteredImages, setFilteredImages] = useState(images);  // สถานะที่เก็บรูปภาพที่ถูกกรอง
+    const [filteredImages, setFilteredImages] = useState(images);
 
     // ฟังก์ชันที่ใช้เมื่อคลิกที่แต่ละตัวกรอง
     const handleFilter = (filterType) => {
@@ -27,10 +27,11 @@ const Browse = () => {
         } else if (filterType === 'top-views') {
             filtered = images.filter(image => image.category.includes('top-views'));
         }
-        setFilteredImages(filtered);  // อัพเดตสถานะรูปภาพที่กรองแล้ว
+        setFilteredImages(filtered);
     };
 
     return (
+        
         <div>
             <div className="browse-container">
                 <div className="browse-item" onClick={() => handleFilter('recent')}>

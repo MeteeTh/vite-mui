@@ -12,10 +12,9 @@ function MainLayout() {
         <>
             <Header />
             <HeroSection />
-          
             <Content />
             <BackTop />
-            {/* <Footer /> */}
+            <Footer />
         </>
     )
 }

@@ -16,31 +16,24 @@
     border-radius: 8px;
     text-align: center;
     background-color: #f0f0f0;
-    /* ตั้งค่าสีพื้นหลัง */
     transition: background-color 0.3s ease, transform 0.3s ease;
-    /* เพิ่มการเปลี่ยนแปลงสีพื้นหลังและขนาดเมื่อ hover */
 }
 
 .browse-item:hover {
     background-color: #e0e0e0;
-    /* เปลี่ยนสีพื้นหลังเมื่อ hover */
     transform: scale(1.05);
-    /* ขยายขนาด item เมื่อ hover */
     cursor: pointer;
 }
 
 .browse-item:active {
     background-color: #d0d0d0;
-    /* เปลี่ยนสีพื้นหลังเมื่อกด */
     transform: scale(1);
-    /* ปรับขนาดกลับเมื่อคลิก */
 }
 
 .browse-label {
     font-size: 18px;
     font-weight: bold;
     color: #333;
-    /* เปลี่ยนสีข้อความ */
 }
 
 .image-gallery {
