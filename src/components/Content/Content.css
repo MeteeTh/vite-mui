@@ -8,7 +8,7 @@
 }
 
 #content-container {
-   margin: 50px 300px;
+    margin: 50px 300px;
 }
 
 .uptext {
@@ -20,11 +20,24 @@
     font-size: 42px;
 }
 
-#news-container .whats-new,#album-container .album-search {
+.view-more-container {
+    width: 100%;
+    position: relative;
+    font-size: 16px;
+    color: #a73b24;
+    text-align: right;
+    justify-content: right;
+    display: flex;
+    text-decoration: none;
+}
+
+#news-container .news-latest,
+#albums-container .albums-latest,
+#categories-container .categories-latest {
     line-height: 100%;
 }
 
-
+/* news */
 .news-image {
     width: 100%;
     height: auto;
@@ -72,9 +85,7 @@
 
 .sithan-kku-festival-parent {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
-    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
+    grid-template-columns: repeat(5, 1fr);
     gap: 8px;
     width: 100%;
     margin: 20px auto;
@@ -86,16 +97,101 @@
     height: auto;
     aspect-ratio: 1 / 1;
     object-fit: cover;
+}
+
+/* album */
+#albums-container {
+    margin-top: 50px;
+}
+
+.albums {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    gap: 8px;
+}
+
+/* 
+@media (max-width: 1200px) {
+    .albumcontainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .albumcontainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .albumcontainer {
+        grid-template-columns: 1fr;
+    }
+} */
+
+.the-album {
+    margin: 0px;
+}
+
+.album-thumb {
+    margin-bottom: 6px;
+    display: grid;
 
 }
 
-.view-more-container {
+.album-cover {
     width: 100%;
-    position: relative;
-    font-size: 16px;
-    color: #a73b24;
-    text-align: right;
-    justify-content: right;
-    display: flex;
-    text-decoration: none;
+    height: auto;
+    object-fit: cover;
+}
+
+.album-title {
+    letter-spacing: 0.07em;
+    font-size: 18px;
+}
+
+.album-qty {
+    font-size: 14px;
+    letter-spacing: 0.07em;
+    margin-bottom: 5px;
+    color: #939393;
+}
+
+/* category */
+#categories-container {
+    margin-top: 50px;
+
+}
+
+.catagories {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    gap: 40px 8px;
+
+}
+
+.the-catagory {
+    padding: 0px 0px 20px 0px;
+    background-color: #d6d6d6;
+    height: 100%;
+}
+
+.catagory-thumb {
+    margin-bottom: 6px;
+    display: grid;
+}
+
+
+.catagory-title {
+    letter-spacing: 0.07em;
+    font-size: 18px;
+    padding: 20px;
+}
+
+.category-cover {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
