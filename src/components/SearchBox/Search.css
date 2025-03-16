@@ -1,9 +1,23 @@
 .search-container {
     width: 100%;
+    /* max-width: 100%; */
     margin-top: 20px;
-
-
+    box-sizing: border-box;
+    justify-content: center;
+    display: flex;
 }
+
+/* @media (max-width: 768px) {
+    .search-container {
+        width: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-container {
+        width: 200px;
+    }
+} */
 
 .search-container .MuiOutlinedInput-root {
     background-color: rgba(255, 255, 255, 0.8);

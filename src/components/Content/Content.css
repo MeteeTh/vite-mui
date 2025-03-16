@@ -1,0 +1,95 @@
+#content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 300px;
+}
+
+.uptext {
+    margin: 0;
+}
+
+.title {
+    margin-top: 15px;
+    font-size: 42px;
+}
+
+#news-container .whats-new,#album-container .album-search {
+    line-height: 100%;
+}
+
+
+.news-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.news-title {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 26px;
+    margin-top: 20px;
+}
+
+.hover-underline-animation {
+    position: relative;
+    color: darkred;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    justify-content: center;
+}
+
+.hover-underline-animation::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: darkred;
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.hover-underline-animation:hover {
+    color: #b22222;
+}
+
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.sithan-kku-festival-parent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
+    gap: 8px;
+    width: 100%;
+    margin: 20px auto;
+    justify-content: center;
+}
+
+.sithan-kku-festival-parent img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+
+}
+
+.view-more-container {
+    width: 100%;
+    position: relative;
+    font-size: 16px;
+    color: #a73b24;
+    text-align: right;
+    justify-content: right;
+    display: flex;
+    text-decoration: none;
+}

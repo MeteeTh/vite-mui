@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import './FilterSearch.css';
-import image1 from '../images/_DSC3538.jpg';
+import './Browse.css';
+import image1 from '../../images/_DSC3538.jpg';
 import Divider from '@mui/material/Divider';
 
 // ตัวอย่างข้อมูลรูปภาพ (ใช้ภาพจาก Unsplash)
@@ -12,7 +12,7 @@ const images = [
     { id: 5, title: 'ภาพที่ 5', category: ['recent', 'top-views'], imageUrl: image1 }
 ];
 
-const FilterSearch = () => {
+const Browse = () => {
     const [filteredImages, setFilteredImages] = useState(images);  // สถานะที่เก็บรูปภาพที่ถูกกรอง
 
     // ฟังก์ชันที่ใช้เมื่อคลิกที่แต่ละตัวกรอง
@@ -31,24 +31,24 @@ const FilterSearch = () => {
     };
 
     return (
-        <>
-            <div>
-                <div className="filter-search-container">
-                    <div className="filter-search-item" onClick={() => handleFilter('recent')}>
-                        <div className="filter-search-label">รูปภาพล่าสุดทั้งหมด</div>
-                    </div>
-                    <div className="filter-search-item" onClick={() => handleFilter('album')}>
-                        <div className="filter-search-label">อัลบั้มทั้งหมด</div>
-                    </div>
-                    <div className="filter-search-item" onClick={() => handleFilter('top-downloads')}>
-                        <div className="filter-search-label">ดาวน์โหลดสูงสุด</div>
-                    </div>
-                    <div className="filter-search-item" onClick={() => handleFilter('top-views')}>
-                        <div className="filter-search-label">เข้าชมสูงสุด</div>
-                    </div>
+        <div>
+            <div className="browse-container">
+                <div className="browse-item" onClick={() => handleFilter('recent')}>
+                    <div className="browse-label">รูปภาพล่าสุดทั้งหมด</div>
                 </div>
-                <Divider sx={{ width: '50%', height: 'auto',mt: 2, mb: 2, mx: 'auto' }} variant="middle" />
-                {/* <div className="image-gallery">
+                <div className="browse-item" onClick={() => handleFilter('album')}>
+                    <div className="browse-label">อัลบั้มทั้งหมด</div>
+                </div>
+                <div className="browse-item" onClick={() => handleFilter('top-downloads')}>
+                    <div className="browse-label">ดาวน์โหลดสูงสุด</div>
+                </div>
+                <div className="browse-item" onClick={() => handleFilter('top-views')}>
+                    <div className="browse-label">เข้าชมสูงสุด</div>
+                </div>
+            </div>
+            <Divider sx={{ width: '50%', height: 'auto', mt: 2, mb: 2, mx: 'auto' }} variant="middle" />
+            {/* แสดงรูปภาพที่กรองแล้ว */}
+            {/* <div className="image-gallery">
                     {filteredImages.map(image => (
                         <div key={image.id} className="image-item">
                             <img src={image.imageUrl} alt={image.title} />
@@ -56,9 +56,8 @@ const FilterSearch = () => {
                         </div>
                     ))}
                 </div> */}
-            </div>
-        </>
+        </div>
     );
 };
 
-export default FilterSearch;
+export default Browse;
