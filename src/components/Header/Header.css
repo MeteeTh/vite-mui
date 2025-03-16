@@ -67,7 +67,6 @@
 }
 
 .logo-white:hover {
-    height: 70px;
     object-fit: contain;
     filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.5));
 }
@@ -124,7 +123,6 @@
     margin-top: 2px;
 }
 
-/* Hamburger Menu - ซ่อนเมื่อขนาดหน้าจอใหญ่ */
 .header .hamburger-button {
     display: none;
 }
@@ -133,7 +131,40 @@
     display: none;
 }
 
-/* เพิ่มการซ่อน Navbar และปุ่ม Login เมื่อ Hamburger เปิด */
+/* แก้ปัญหา Navbar ข้อความตกบรรทัด */
+@media (max-width: 1124px) {
+
+    .header {
+        font-synthesis: none;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 15px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease, height 0.3s ease;
+    }
+
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0px 15px;
+        width: 100%;
+        max-width: 100%;
+        transition: margin 0.3s ease;
+    }
+
+    .header.scrolled .header-container {
+        margin: 0px;
+        padding: 0px 15px;
+    }
+}
+
+/* เปลี่ยนไปใช้ Hamburger Menu */
+/* ซ่อน Navbar และแสดง Hamburger Menu */
 @media (max-width: 955px) {
 
     .header {
@@ -203,7 +234,7 @@
         display: none;
     }
 
-    .header .login-btn-mobile {
+    .login-btn-mobile {
         display: block;
     }
 
@@ -214,38 +245,60 @@
     }
 
     .header .hamburger-button {
-        display: block;
+        display: flex;
+        align-items: center;
 
     }
 }
 
-@media (max-width: 1124px) {
 
-    .header {
-        font-synthesis: none;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        padding: 15px 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 1000;
-        transition: background-color 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease, height 0.3s ease;
+/* ปรับขนาดให้เหมาะสม แก้ปัญหาปุ่ม Login ตกบรรทัด */
+@media (max-width: 420px) {
+    .logo-white {
+        height: 40px;
+        object-fit: contain;
+        transition: height 0.3s ease, filter 0.5s ease;
     }
 
-    .header-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0px 15px;
-        width: 100%;
-        max-width: 100%;
-        transition: margin 0.3s ease;
+    .login-btn-mobile {
+        font-size: 12px !important;
     }
 
-    .header.scrolled .header-container {
-        margin: 0px;
-        padding: 0px 15px;
+    .login-icon-mobile {
+        width: 12px !important;
+    }
+
+    .header.scrolled .logo-white {
+        height: 35px;
+        object-fit: contain;
     }
 }
+
+/* แก้ปัญหาปุ่ม Login กว้างเกินเหมาะสม */
+/* ซ่อน icon และทำให้ข้อความเหลือแค่คำว่า Login */
+@media (max-width: 370px) {
+    .login-icon-mobile {
+        display: none;
+    }
+
+    .login-btn-mobile::before {
+        content: "Login";
+    }
+
+    .login-btn-mobile img,
+    .login-btn-mobile span {
+        display: none;
+    }
+
+    .header.scrolled .logo-white {
+        height: 40px;
+        object-fit: contain;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;500&display=swap');
+
+.drawer-list {
+    font-family: 'Prompt';
+}
+
